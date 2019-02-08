@@ -42,7 +42,7 @@ DEBUG = False
 
 
 
-ALLOWED_HOSTS = ['warm-retreat-85599-herokuapp.com','.warmretreat85599.com']
+ALLOWED_HOSTS = [".herokuapp.com",".warmretreat85599.com"]
 
 
 # Application definition
