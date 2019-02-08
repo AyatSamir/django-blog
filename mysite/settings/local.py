@@ -27,7 +27,25 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# For Sending Email Via Google account
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_USE_TLS= True
+
+EMAIL_PORT= 587
+
+EMAIL_HOST_USER = 'tota.samir14@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'ayatayat1414'
+
+ADMINS =(
+    ('blog','tota.samir14@gmail.com')
+)
+MANAGERS = ADMINS
 # Application definition
 SITE_ID = 1
 INSTALLED_APPS = [
@@ -129,20 +147,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/'),
 
 
-# For Sending Email Via Google account
-
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST = 'smtp.gmail.com'
-
-EMAIL_USE_TLS= True
-
-EMAIL_PORT= 587
-
-EMAIL_HOST_USER = 'tota.samir14@gmail.com'
-
-EMAIL_HOST_PASSWORD = 'ayatayat1414'
 
 # for deployment
 

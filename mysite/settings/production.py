@@ -17,15 +17,32 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_USE_TLS= True
+
+EMAIL_PORT= 587
+
+EMAIL_HOST_USER = 'tota.samir14@gmail.com'
+
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+
+ADMINS =(
+    ('blog','tota.samir14@gmail.com')
+)
+MANAGERS = ADMINS
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'n5hq65ah1#$p+8=g7k7v5f%jh*ef#knt@+d=n%nk!d$aut4cj-'
+SECRET_KEY = os.environ.get('SECRET_KEY','n5hq65ah1#$p+8=g7k7v5f%jh*ef#knt@+d=n%nk!d$aut4cj-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['warm-retreat-85599-herokuapp.com','.warmretreat85599.com']
 
 
 # Application definition
@@ -79,13 +96,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': 'blog',
-        'PASSWORD':'ayatayat1414',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+
+    # }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+# DATABASES['default']['CONN_MAX_AGE'] = 500
 
 
 # Password validation
@@ -127,23 +148,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/'),
-
-
-# For Sending Email Via Google account
-
-
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
-EMAIL_HOST = 'smtp.gmail.com'
-
-EMAIL_USE_TLS= True
-
-EMAIL_PORT= 587
-
-EMAIL_HOST_USER = 'tota.samir14@gmail.com'
-
-EMAIL_HOST_PASSWORD = 'ayatayat1414'
-
 
 # for delpoyment
 
