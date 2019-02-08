@@ -5,6 +5,7 @@ from taggit.managers import TaggableManager
 from django.urls import reverse
 # Create your models here.
 
+
 class PublishedManager(models.Manager):
     def get_queryset(self):
         return super(PublishedManager,self)\
