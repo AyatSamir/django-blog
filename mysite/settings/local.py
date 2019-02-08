@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'blog',
         'USER': 'blog',
-        'PASSWORD':'ayatayat1414',
+        'PASSWORD':'',
     }
 }
 
@@ -142,7 +142,7 @@ EMAIL_PORT= 587
 
 EMAIL_HOST_USER = 'tota.samir14@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'ayatayat1414'
+EMAIL_HOST_PASSWORD = ''
 
 # for deployment
 
