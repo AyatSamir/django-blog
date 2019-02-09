@@ -80,11 +80,19 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
      'default': {
          'ENGINE': 'django.db.backends.sqlite3',
          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 
 
+=======
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog',
+        'USER': 'blog',
+        'PASSWORD':'',
+>>>>>>> 0b9f8f20eaaaf3d0d4866a1bddac85ba7a8f7085
     }
 }
 
@@ -144,7 +152,7 @@ EMAIL_PORT= 587
 
 EMAIL_HOST_USER = 'tota.samir14@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'ayatayat1414'
+EMAIL_HOST_PASSWORD = ''
 
 # for deployment
 

@@ -99,9 +99,17 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
          'ENGINE': 'django.db.backends.sqlite3',
          'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 }
+=======
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'blog',
+        'USER': 'blog',
+        'PASSWORD':'',
+    }
+>>>>>>> 0b9f8f20eaaaf3d0d4866a1bddac85ba7a8f7085
 }
 
 
@@ -145,6 +153,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD
+=======
+EMAIL_HOST_PASSWORD = ''
+>>>>>>> 0b9f8f20eaaaf3d0d4866a1bddac85ba7a8f7085
 
 # for deployment
 
