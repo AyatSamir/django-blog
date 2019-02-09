@@ -40,7 +40,7 @@ EMAIL_PORT= 587
 
 EMAIL_HOST_USER = 'tota.samir14@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'ayatayat1414'
+EMAIL_HOST_PASSWORD = ''
 
 ADMINS =(
     ('blog','tota.samir14@gmail.com')
@@ -156,7 +156,7 @@ STATIC_URL = '/static/'
 <<<<<<< HEAD
 =======
 EMAIL_HOST_PASSWORD = ''
->>>>>>> 0b9f8f20eaaaf3d0d4866a1bddac85ba7a8f7085
+>>>>>>> 
 
 # for deployment
 
